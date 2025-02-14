@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feliz San Valentín</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(135deg, #ff758c, #ff7eb3);
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            color: white;
+        }
+        .card {
+            background: white;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+            color: #ff4e50;
+            width: 80%;
+            max-width: 400px;
+        }
+        h1 {
+            font-size: 24px;
+        }
+        .heart {
+            font-size: 50px;
+            animation: heartbeat 1.5s infinite;
+        }
+        @keyframes heartbeat {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+            100% { transform: scale(1); }
+        }
+        .hidden-message {
+            display: none;
+            margin-top: 10px;
+        }
+        .btn {
+            background: #ff4e50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 10px;
+        }
+        .btn:hover {
+            background: #e43e4e;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h1>Feliz San Valentín Milu 💗</h1>
+        <div class="heart">❤️</div>
+        <button class="btn" onclick="mostrarMensaje()">Presiona aquí</button>
+        <p class="hidden-message" id="mensaje">Eres mi complemento y mi todo, te amo ardillita 🐿️ </p>
+    </div>
+    <script>
+        function mostrarMensaje() {
+            document.getElementById('mensaje').style.display = 'block';
+        }
+    </script>
+</body>
+</html>
